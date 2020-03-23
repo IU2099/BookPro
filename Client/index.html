@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/Style.css">
+    <script src='src/ws.js'></script>
+    <script src='src/NetHttp.js'></script>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+
+<body>
+    <div class="drag">
+        <button id='close'>x</button>
+        <button id='min'>-</button>
+    </div>
+
+    <div class="login">
+        <form class="login">
+            账号: <input type="text" id='account' placeholder="输入账号" value=''><br>
+            密码: <input type="password" id='pas' placeholder="输入密码" value=''><br>
+            <input type="button" id='login' value="登录">
+            <input type="button" id='regist' value="注册">
+        </form>
+    </div>
+
+
+    <script src='src/renderer/index.js'></script>
+</body>
+
+</html>

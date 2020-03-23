@@ -1,0 +1,18 @@
+{
+  "name": "studydemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ./src/main/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.1.1"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cnpm": "^6.1.1"
+  }
+}
