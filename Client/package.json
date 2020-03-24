@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "cnpm": "^6.1.1"
+    "cnpm": "^6.1.1",
+    "electron-log": "^4.1.0"
   }
 }

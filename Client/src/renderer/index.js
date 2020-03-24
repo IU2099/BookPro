@@ -26,7 +26,7 @@ window.onload = () => {
 
     btn_close.onclick = () => {
         console.log('btn_close');
-        ipcRenderer.send('close');
+        ipcRenderer.send('quit');
     }
     btn_min.onclick = () => {
         console.log('btn_min');
@@ -36,9 +36,15 @@ window.onload = () => {
         console.log('btn_login');
         console.log(account.value);
         console.log(password.value);
+        ipcRenderer.send('createMain');
+        //ipcRenderer.send('close');
 
         NetHttp.login(account.value, password.value).then((res) => {
             console.log(res.data);
+            if (res.data.code === 200) {
+                ipcRenderer.send('createMain');
+                ipcRenderer.send('close');
+            }
         }).catch((err) => {
             console.log(err);
             if (err.message.indexOf('Network Error') >= 0) {

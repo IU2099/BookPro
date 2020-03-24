@@ -49,7 +49,6 @@ var NetHttp =
         return httpPost("/", '链接服务器')
     },
     login: function (account, password) {
-        console.log(md5(password))
         return httpPost("/login", {
             account: account,
             password: md5(password)
